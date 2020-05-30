@@ -41,7 +41,7 @@ cur.execute('''CREATE TABLE IF NOT EXISTS ACCOUNT
 
 process = True
 while process:
-    name = input("Enter the Account holder name: ")
+    name = input("Enter the Account holder name: ").upper()
     method = input(' to Deposit or Withdraw: (D or W) ')
     cur.execute('SELECT BALANCE FROM ACCOUNT WHERE Acc_HOLDER=? LIMIT 1', (name, ))
     try:
